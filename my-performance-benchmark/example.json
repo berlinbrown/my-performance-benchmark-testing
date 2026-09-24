@@ -1,0 +1,36 @@
+{
+  "config": {
+    "durationInSecs": 60,
+    "numberThreadUsers": 60,
+    "host": "http://127.0.0.1:8080",
+    "requestTimeoutInSecs": 10,
+    "scenarios": [
+      {
+        "name": "Home",
+        "uri": "/",
+        "httpCodeExpected": 200,
+        "delayBeforeReq": {
+          "type": "random",
+          "uptoInMs": 1000
+        },
+        "delayAfterReq": {
+          "type": "random",
+          "uptoInMs": 1000
+        }
+      },
+      {
+        "name": "Main Van AI Home URI",
+        "uri": "/vanus-home-messages.van",
+        "httpCodeExpected": 200,
+        "delayBeforeReq": {
+          "type": "random",
+          "uptoInMs": 1000
+        },
+        "delayAfterReq": {
+          "type": "random",
+          "uptoInMs": 1000
+        }
+      }
+    ]
+  }
+}

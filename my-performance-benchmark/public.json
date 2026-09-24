@@ -1,0 +1,36 @@
+{
+  "config": {
+    "durationInSecs": 60,
+    "numberThreadUsers": 60,
+    "host": "https://myberlinaustin.com",
+    "requestTimeoutInSecs": 10,
+    "scenarios": [
+      {
+        "name": "Home",
+        "uri": "/",
+        "httpCodeExpected": 200,
+        "delayBeforeReq": {
+          "type": "random",
+          "uptoInMs": 1000
+        },
+        "delayAfterReq": {
+          "type": "random",
+          "uptoInMs": 1000
+        }
+      },
+      {
+        "name": "Van Play Home",
+        "uri": "/vanapp/",
+        "httpCodeExpected": 200,
+        "delayBeforeReq": {
+          "type": "random",
+          "uptoInMs": 1000
+        },
+        "delayAfterReq": {
+          "type": "random",
+          "uptoInMs": 1000
+        }
+      }
+    ]
+  }
+}

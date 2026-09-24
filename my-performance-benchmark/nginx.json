@@ -1,0 +1,23 @@
+{
+  "config": {
+    "durationInSecs": 60,
+    "numberThreadUsers": 40,
+    "host": "http://127.0.0.1:8082",
+    "requestTimeoutInSecs": 10,
+    "scenarios": [
+      {
+        "name": "Home",
+        "uri": "/",
+        "httpCodeExpected": 200,
+        "delayBeforeReq": {
+          "type": "random",
+          "uptoInMs": 1000
+        },
+        "delayAfterReq": {
+          "type": "random",
+          "uptoInMs": 1000
+        }
+      }
+    ]
+  }
+}
